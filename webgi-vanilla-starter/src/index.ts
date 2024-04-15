@@ -26,21 +26,21 @@ import {
 } from "webgi";
 import "./styles.css";
 
-async function setupViewer(){
+async function setupViewer() {
 
     // Initialize the viewer
     const viewer = new ViewerApp({
         canvas: document.getElementById('webgi-canvas') as HTMLCanvasElement,
-        useRgbm:false
+        useRgbm: false
     })
 
     // Add plugins individually.
     // await viewer.addPlugin(GBufferPlugin)
     // await viewer.addPlugin(new ProgressivePlugin(32))
-    // await viewer.addPlugin(new TonemapPlugin(!viewer.useRgbm))
+   //  await viewer.addPlugin(new TonemapPlugin(!viewer.useRgbm))
     // await viewer.addPlugin(GammaCorrectionPlugin)
-    // await viewer.addPlugin(SSRPlugin)
-    // await viewer.addPlugin(SSAOPlugin)
+    //await viewer.addPlugin(SSRPlugin)
+    //await viewer.addPlugin(SSAOPlugin)
     // await viewer.addPlugin(DiamondPlugin)
     // await viewer.addPlugin(FrameFadePlugin)
     // await viewer.addPlugin(GLTFAnimationPlugin)
@@ -69,9 +69,9 @@ async function setupViewer(){
     // await viewer.setEnvironmentMap("./assets/environment.hdr");
 
     // Add some UI for tweak and testing.
-    const uiPlugin = await viewer.addPlugin(TweakpaneUiPlugin)
-    // Add plugins to the UI to see their settings.
-    uiPlugin.setupPlugins<IViewerPlugin>(TonemapPlugin, CanvasSnipperPlugin)
+    // const uiPlugin = await viewer.addPlugin(TweakpaneUiPlugin)
+    // // Add plugins to the UI to see their settings.
+    // uiPlugin.setupPlugins<IViewerPlugin>(TonemapPlugin, CanvasSnipperPlugin)
 
 }
 
